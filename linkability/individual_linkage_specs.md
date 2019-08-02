@@ -20,7 +20,7 @@ Linkage data specifications include the data structure and data conventions used
 ### Data structure
 Notes:
    * ROW_ID: A unique integer value for each row in a table.
-   * UID: A unique integer value for each unique person in a data extract. Each data extract will include a new unique random patient-specific UID. Sites will maintain a separate secure table that retains the mapping between the random UID and the source data identifier (e.g., MRN) (See Example 2)
+   * ID: A unique integer value for each unique person in a data extract. Each data extract will include a new unique random patient-specific ID. Sites will maintain a separate secure table that retains the mapping between the random ID and the source data identifier (e.g., MRN) (See Example 2)
    * A unique individual (person) may have multiple data rows (row_ids) that have the same uid (See Example 1)
    * row_id and uid are required fields. All other fields are also required but may be empty, in accordance with the HL7 concept of RE (Required but may be Empty).[1]
    
@@ -28,7 +28,7 @@ Notes:
 | Field name              | Data type         | Note  |
 |:---------------         |:------------------|:------|
 | row_id                  | Integer           | Unique row identifier |
-| uid                     | Integer           | Unique individual identifier, links to data site maintained person_id |
+| id                      | Integer           | Unique individual identifier, links to data site maintained person_id |
 | first_name              | Varchar(50)       | First name (diacritical characters are allowed) |
 | middle_name             | Varchar(50)       | Middle name or middle initial (with or without the period) |
 | last_name               | Varchar(50)       | Last name (diacritical characters are allowed) |
